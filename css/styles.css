@@ -1,0 +1,94 @@
+:root{
+  --mainFont: 'Roboto', sans-serif;
+  --secondaryFont: 'Roboto Condensed', sans-serif;
+  --primaryColor: #1B90FC;
+  --white: white;
+  --black: #202020;
+}
+
+body{
+  /* border: 1px solid red; */
+  margin: 0;
+  font-family: var(--mainFont);
+
+}
+.wrapper{
+max-inline-size: 1664px;
+margin: auto;
+/* border: 1px solid red; */
+/* overflow: hidden; */
+}
+
+img{
+  /* max-inline-size: 100%;mantendra el tamaño maximo de su contenedor */
+}
+
+p, h1{
+  margin: 0;
+
+}
+
+.hero h1{
+  font-family: var(--secondaryFont);
+  font-size: 40px;
+  margin-block-end: 8px;
+}
+
+.hero p{
+  font-size: 16px;
+  line-height: 24px;
+  margin-block: 24px;
+
+}
+
+.hero-content{
+  display: flex; /**/
+  flex-direction: row;
+  block-size: 768px;
+  align-items: center;
+}
+.card{
+
+  max-inline-size: 412px;
+  color: var(--white);
+  z-index: 2; /*el hero-content tiene display-flex por eso no requiere el position relative*/
+  /* position: relative; */
+}
+
+.hero::before{
+  content: '';
+  inline-size: 50%;
+  display: block;
+  /* block-size: 100%; */
+  background: var(--black);
+  position: absolute;
+  inset-block: 0;
+  clip-path: polygon(0 0,calc(100% - 151px) 0, 100% 100%, 0 100%);
+}
+
+.hero{
+  block-size: 768px;
+  /* border: 1px solid red; */
+  background-color: var(--black);
+  background-image: url('./../img/img.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 128px), 0 100%);
+  /* background-size: cover; */
+}
+
+button{
+  background-color: var(--primaryColor);
+  color: var(--white);
+  padding-block: 16px;
+  padding-inline: 32px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 16px;
+
+}
+
