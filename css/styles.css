@@ -12,15 +12,10 @@ body{
   font-family: var(--mainFont);
 
 }
-.wrapper{
-max-inline-size: 1664px;
-margin: auto;
-/* border: 1px solid red; */
-/* overflow: hidden; */
-}
 
-img{
-  /* max-inline-size: 100%;mantendra el tamaño maximo de su contenedor */
+
+.wrapper .portada img{
+  max-inline-size: 100%;mantendra el tamaño maximo de su contenedor
 }
 
 p, h1{
@@ -32,51 +27,20 @@ p, h1{
   font-family: var(--secondaryFont);
   font-size: 40px;
   margin-block-end: 8px;
+  text-transform: uppercase;
+  padding-block-start: 25.3px;
+  color: var(--white);
 }
 
 .hero p{
   font-size: 16px;
   line-height: 24px;
   margin-block: 24px;
-
-}
-
-.hero-content{
-  display: flex; /**/
-  flex-direction: row;
-  block-size: 768px;
-  align-items: center;
-}
-.card{
-
-  max-inline-size: 412px;
   color: var(--white);
-  z-index: 2; /*el hero-content tiene display-flex por eso no requiere el position relative*/
-  /* position: relative; */
+
 }
 
-.hero::before{
-  content: '';
-  inline-size: 50%;
-  display: block;
-  /* block-size: 100%; */
-  background: var(--black);
-  position: absolute;
-  inset-block: 0;
-  clip-path: polygon(0 0,calc(100% - 151px) 0, 100% 100%, 0 100%);
-}
 
-.hero{
-  block-size: 768px;
-  /* border: 1px solid red; */
-  background-color: var(--black);
-  background-image: url('./../img/img.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 128px), 0 100%);
-  /* background-size: cover; */
-}
 
 button{
   background-color: var(--primaryColor);
@@ -89,6 +53,195 @@ button{
   font-weight: 700;
   text-transform: uppercase;
   line-height: 16px;
+  inline-size: 100%;
 
 }
+
+.wrapper{
+  display: block;
+
+}
+.hero{
+  border: 1px solid var(--black);
+  position: relative;
+  background: var(--black);
+  clip-path: polygon(0% 0%, 100% 0, 100% calc(100% - 80px), 0% 100%);
+}
+
+.hero-content{
+  /* border: 1px solid red; */
+  margin-block-start: 40px;
+  margin-block-end: 121px;
+  margin-inline-start: 64px;
+  margin-inline-end: 64px;
+  /* inset-inline-start: 0; */
+  inline-size: 100%px;
+
+
+
+}
+
+
+@media screen and (min-width: 1366px) {
+  button{
+    inline-size: 200px;
+  }
+  .portada{
+    display: none;
+  }
+  .hero{
+    block-size: 1024px;
+    /* border: 1px solid rgb(64, 0, 255); */
+    background-color: var(--black);
+    background-image: url('./../img/img.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 128px), 0 100%);
+    /* background-size: cover; */
+  }
+
+  .hero::before{
+    content: '';
+    inline-size: 50%;
+    display: block;
+    /* block-size: 100%; */
+    background: var(--black);
+    position: absolute;
+    inset-block: 0;
+    clip-path: polygon(0 0,calc(100% - 151px) 0, 100% 100%, 0 100%);
+  }
+
+  .wrapper{
+  max-inline-size: 1664px;
+  margin: auto;
+  background: none;
+  /* border: 5px solid green; */
+  /* overflow: hidden; */
+  }
+
+  .hero-content{
+    display: flex; /**/
+    flex-direction: row;
+    block-size: 768px;
+    align-items: center;
+    background: none;
+  }
+
+  .card{
+    /* border: 1px solid red; */
+    max-inline-size: 412px;
+    color: var(--white);
+    padding-inline-start: 83px;
+    z-index: 2; /*el hero-content tiene display-flex por eso no requiere el position relative*/
+    /* position: relative; */
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+  .portada{
+    display: none;
+  }
+  .hero{
+    block-size: 1024px;
+    /* border: 1px solid rgb(64, 0, 255); */
+    background-color: var(--black);
+    background-image: url('./../img/img.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 128px), 0 100%);
+    /* background-size: cover; */
+  }
+
+  .hero::before{
+    content: '';
+    inline-size: 50%;
+    display: block;
+    /* block-size: 100%; */
+    background: var(--black);
+    position: absolute;
+    inset-block: 0;
+    clip-path: polygon(0 0,calc(100% - 151px) 0, 100% 100%, 0 100%);
+  }
+
+  .wrapper{
+  max-inline-size: 1664px;
+  margin: auto;
+  /* border: 5px solid green; */
+  /* overflow: hidden; */
+  }
+
+  .hero-content{
+    display: flex; /**/
+    flex-direction: row;
+    block-size: 768px;
+    align-items: center;
+  }
+
+  .card{
+    /* border: 1px solid red; */
+    max-inline-size: 412px;
+    color: var(--white);
+    padding-inline-start: 83px;
+    z-index: 2; /*el hero-content tiene display-flex por eso no requiere el position relative*/
+    /* position: relative; */
+  }
+
+
+}
+
+@media screen and (min-width: 1800px) {
+  .portada{
+    display: none;
+  }
+  .wrapper{
+  max-inline-size: 1664px;
+  margin: auto;
+  /* border: 1px solid red; */
+  /* overflow: hidden; */
+  }
+
+  .hero-content{
+    display: flex; /**/
+    flex-direction: row;
+    block-size: 768px;
+    align-items: center;
+  }
+
+  .card{
+
+    max-inline-size: 412px;
+    color: var(--white);
+    z-index: 2; /*el hero-content tiene display-flex por eso no requiere el position relative*/
+    /* position: relative; */
+  }
+
+  .hero::before{
+    content: '';
+    inline-size: 50%;
+    display: block;
+    /* block-size: 100%; */
+    background: var(--black);
+    position: absolute;
+    inset-block: 0;
+    clip-path: polygon(0 0,calc(100% - 151px) 0, 100% 100%, 0 100%);
+  }
+
+  .hero{
+    block-size: 1080px;
+    /* border: 1px solid red; */
+    background-color: var(--black);
+    background-image: url('./../img/img.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 128px), 0 100%);
+    /* background-size: cover; */
+  }
+}
+
+
+
 
